@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai's Makeup Studio</title>
+</head>
+
+<body>
+
+    <h1 id="main-heading">Lai's Makeup Studio</h1>
+
+    <p>Welcome to Lai's Makeup Studio! We share simple makeup ideas and products.</p>
+
+    <nav>
+        <a href="#images">Images</a> |
+        <a href="#links">Hyperlinks</a> |
+        <a href="#multimedia">Multimedia</a> |
+        <a href="#useful-tags">Useful Tags</a> |
+        <a href="#html-dom">HTML DOM</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- IMAGES -->
+    <h2 id="images">Images</h2>
+
+    <figure>
+        <img src="makeup1.jpg" alt="Makeup products" width="300">
+        <figcaption>My makeup products</figcaption>
+    </figure>
+
+    <img src="makeup2.jpg" alt="Makeup collection" width="300">
+
+    <img src="makeup3.jpg" alt="Makeup brushes" width="300">
+
+
+    <!-- HYPERLINKS -->
+    <h2 id="links">Hyperlinks</h2>
+
+    <!-- Internal link to another page in my project -->
+    <p>
+        <a href="products.html">See Our Products</a>
+    </p>
+
+    <!-- External link that opens in a new tab -->
+    <p>
+        <a href="https://www.google.com" target="_blank">Visit Google</a>
+    </p>
+
+    <!-- Email link -->
+    <p>
+        <a href="mailto:laismakeup@example.com">Email Us</a>
+    </p>
+
+    <!-- Same-page anchor link that jumps to the section with id="contact" -->
+    <p>
+        <a href="#contact">Go to Contact</a>
+    </p>
+
+
+    <!-- MULTIMEDIA -->
+    <h2 id="multimedia">Multimedia</h2>
+
+    <h3>Makeup Audio</h3>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Makeup Video</h3>
+
+    <video controls width="400">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+
+    <!-- USEFUL TAGS -->
+    <h2 id="useful-tags">Useful Tags</h2>
+
+    <!-- I used mark to highlight an important word. -->
+    <p>Always <mark>clean your makeup tools</mark> before using them.</p>
+
+    <!-- I used blockquote to show a makeup reminder. -->
+    <blockquote>
+        Take your time and enjoy doing your makeup.
+    </blockquote>
+
+    <!-- I used abbr to show the meaning of an abbreviation. -->
+    <p><abbr title="Makeup Artist">MUA</abbr> means Makeup Artist.</p>
+
+
+    <!-- HTML DOM -->
+    <h2 id="html-dom">HTML DOM</h2>
+
+    <p>This is a screenshot of my page's DOM tree in the browser DevTools.</p>
+
+    <img src="dom-tree.png" alt="DevTools Elements panel showing the body, nav, figure and img elements of my page" width="600">
+
+
+    <!-- CONTACT -->
+    <h2 id="contact">Contact Us</h2>
+
+    <p>Email: laismakeup@example.com</p>
+
+
+    <!--
+    Parent-child explanation:
+    The body is the parent of many elements on the page.
+    The nav is the parent of the links inside it.
+    The figure is the parent of the image and figcaption.
+    This shows how elements are connected in the DOM.
+    -->
+
+</body>
+</html>
