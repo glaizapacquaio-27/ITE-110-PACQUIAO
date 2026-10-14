@@ -1,70 +1,102 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile Card</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <h1>Glaiza Bea Pacquiao</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#notes">Notes</a>
+            <a href="#hobbies">Hobbies</a>
         </nav>
     </header>
 
     <main>
-        <div class="card" id="about">
+        <section class="card" id="about">
+            <span class="badge">PROFILE</span>
             <h2>About Me</h2>
             <p class="intro">
                 I am a BSIT student who is learning about computers
                 and web development.
             </p>
             <p>My hobbies include reading manga, cooking, and playing games.</p>
-        </div>
+        </section>
 
-        <div class="card" id="skills">
+        <section class="card" id="skills">
             <h2>My Skills</h2>
-            <ul class="skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Teamwork</li>
-            </ul>
-        </div>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Teamwork</span>
+            </div>
+        </section>
 
-        <div class="card" id="notes">
+        <section class="card" id="notes">
             <h2>Notes</h2>
-            <p class="hide-none">Must disappear and leave no gap.</p>
-            <p class="hide-visibility">
-                Invisible, but must keep its space.
-            </p>
-            <p>This paragraph is always visible.</p>
-        </div>
 
-        <div class="card scroll-box">
+            <p class="hide-none">
+                This text must disappear and leave no gap.
+            </p>
+
+            <p class="hide-visibility">
+                This text is invisible but still keeps its space.
+            </p>
+
+            <p>This paragraph is always visible.</p>
+        </section>
+
+        <section class="card" id="hobbies">
             <h2>Hobbies</h2>
-            <p>
+            <div class="scroll-box">
                 One of my hobbies is reading manga because I enjoy
                 interesting stories and different characters. I also
                 like cooking because I can learn new recipes and prepare
-                delicious food. Playing games is another activity I
-                enjoy during my free time. These hobbies help me relax
-                after studying and completing school activities.
-                I also enjoy spending quiet time by myself. Sometimes,
-                I discover new things through the stories I read and
-                the games I play. I believe hobbies are important because
-                they help us balance school responsibilities and personal
-                interests. I want to continue learning new skills while
-                enjoying the things I love.
+                delicious food. Playing games is another activity I enjoy
+                during my free time. These hobbies help me relax after
+                studying and completing school activities. I also enjoy
+                spending quiet time by myself. Sometimes, I discover new
+                things through the stories I read and the games I play.
+                I believe hobbies are important because they help us
+                balance school responsibilities and personal interests.
+            </div>
+        </section>
+
+        <section class="card" id="reflection">
+            <h2>Reflection Questions</h2>
+
+            <p>
+                <strong>1. Why does the later body rule win?</strong><br>
+                The later body rule wins because both rules have the same
+                selector and specificity. The rule written last takes effect.
             </p>
-        </div>
+
+            <p>
+                <strong>2. What happens when using content-box?</strong><br>
+                The total width becomes 544px because the 500px content
+                width does not include the 40px padding and 4px borders.
+            </p>
+
+            <p>
+                <strong>3. When should visibility hidden be used?</strong><br>
+                I use visibility hidden when I want to hide an element
+                but keep its space. I use display none when I want to
+                remove the element and its space completely.
+            </p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Glaiza Bea Pacquiao</p>
     </footer>
+
 </body>
 </html>
+```
