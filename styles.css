@@ -1,0 +1,175 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #FFF0F5;
+    line-height: 1.6;
+}
+
+/* Cascade example */
+body {
+    background-color: #FFF0F5;
+}
+
+/* Header and footer */
+header, footer {
+    background-color: #D81B60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #EC407A;
+    padding: 8px 15px;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #F8BBD0;
+    color: #880E4F;
+}
+
+/* Main section */
+main {
+    padding: 20px;
+}
+
+/* Profile cards */
+.card {
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #F8BBD0;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto 20px auto;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* About card */
+#about {
+    border-color: #D81B60;
+}
+
+/* Profile badge */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #D81B60;
+    color: white;
+    font-size: 10px;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+/* Paragraphs */
+.card p {
+    margin-bottom: 10px;
+}
+
+/* Introduction */
+.intro {
+    color: #C2185B;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* First letter effect */
+.intro::first-letter {
+    font-size: 2rem;
+    color: #D81B60;
+}
+
+/* Skills list */
+.skills-list > li {
+    background-color: #FCE4EC;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Flexbox */
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Card width includes padding and border */
+
+/* Hide element completely */
+.hide-none {
+    display: none;
+}
+
+/* Hide element but keep its space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* Scroll box */
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+/* Footer spacing */
+footer {
+    margin-top: 20px;
+}
+
+/* Reflection answers */
+
+/*
+1. The second body rule wins because it comes last.
+Both rules have the same selector and specificity.
+
+2. The total width would be 544px.
+500px width plus 40px padding plus 4px border.
+
+3. I use visibility hidden when I want to hide an element
+but keep its space. I use display none when I want to
+remove the element and its space.
+*/
