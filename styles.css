@@ -1,150 +1,118 @@
-
-/* Reset */
+```css
+/* General style */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* Layout */
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333333;
-    background-color: #FFF0F5;
+    margin: 0;
+    background-color: #fff0f5;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Cascade example */
-body {
-    background-color: #FFF0F5;
-}
-
-/* Header and footer */
-header, footer {
-    background-color: #D81B60;
+/* Header */
+header {
+    background-color: #d81b60;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* Headings */
-h1, h2 {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+header h1 {
+    margin: 0 0 20px;
 }
 
 /* Navigation */
 nav {
-    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
-    display: inline-block;
     color: white;
     text-decoration: none;
-    background-color: #EC407A;
-    padding: 8px 15px;
-    margin: 4px;
-    border-radius: 5px;
+    background-color: #ec407a;
+    padding: 10px 16px;
+    border-radius: 6px;
 }
 
-/* Hover effect */
 nav a:hover {
-    background-color: #F8BBD0;
-    color: #880E4F;
+    background-color: #ad1457;
 }
 
-/* Main section */
+/* Main content */
 main {
-    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
 }
 
 /* Profile cards */
 .card {
-    width: 500px;
-    padding: 20px;
-    border: 2px solid #F8BBD0;
-    border-radius: 12px;
     background-color: white;
-    margin: 0 auto 20px auto;
+    border: 2px solid #ffb6c1;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* About card */
-#about {
-    border-color: #D81B60;
+.card h2 {
+    margin-top: 0;
+    color: #333;
 }
 
 /* Profile badge */
-#about::after {
-    content: "PROFILE";
+.badge {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #D81B60;
+    background-color: #e91e63;
     color: white;
-    font-size: 10px;
-    padding: 3px 7px;
+    padding: 3px 10px;
     border-radius: 5px;
-}
-
-/* Paragraphs */
-.card p {
-    margin-bottom: 10px;
+    font-size: 12px;
 }
 
 /* Introduction */
 .intro {
-    color: #C2185B;
-    font-size: 1.1rem;
+    color: #d81b60;
     font-weight: bold;
+    font-size: 18px;
 }
 
-/* First letter effect */
+/* Pseudo-element */
 .intro::first-letter {
     font-size: 2rem;
-    color: #D81B60;
+    color: #e91e63;
 }
 
-/* Skills list */
-.skills-list > li {
-    background-color: #FCE4EC;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-/* Flexbox */
-.skills-list {
+/* Skills */
+.skills {
     display: flex;
-    justify-content: space-around;
     gap: 10px;
-    list-style: none;
+    flex-wrap: wrap;
 }
 
-.skills-list li {
+.skills span {
     flex: 1;
+    min-width: 100px;
     text-align: center;
+    background-color: #fce4ec;
+    padding: 10px;
+    border-radius: 6px;
 }
 
-/* Card width includes padding and border */
-
-/* Hide element completely */
+/* Display and visibility */
 .hide-none {
     display: none;
 }
 
-/* Hide element but keep its space */
 .hide-visibility {
     visibility: hidden;
 }
@@ -153,23 +121,43 @@ main {
 .scroll-box {
     height: 120px;
     overflow: auto;
+    padding: 5px;
 }
 
-/* Footer spacing */
+/* Reflection questions */
+#reflection p {
+    margin-bottom: 18px;
+}
+
+/* Footer */
 footer {
-    margin-top: 20px;
+    background-color: #d81b60;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
 }
 
-/* Reflection answers */
+/* Responsive design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
 
-/*
-1. The second body rule wins because it comes last.
-Both rules have the same selector and specificity.
+    main {
+        padding: 0 12px;
+    }
 
-2. The total width would be 544px.
-500px width plus 40px padding plus 4px border.
+    .card {
+        padding: 16px;
+    }
 
-3. I use visibility hidden when I want to hide an element
-but keep its space. I use display none when I want to
-remove the element and its space.
-*/
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills span {
+        width: 100%;
+    }
+}
+```
