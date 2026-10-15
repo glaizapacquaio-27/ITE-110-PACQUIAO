@@ -1,118 +1,145 @@
-```css
-/* General style */
+
+/* Reset */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+/* Page layout */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    font-size: 16px;
+    color: #333333;
     background-color: #fff0f5;
-    color: #333;
     line-height: 1.6;
 }
 
-/* Header */
-header {
+/* Cascade example */
+body {
+    background-color: #fff0f5;
+}
+
+/* Header and footer */
+header, footer {
     background-color: #d81b60;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-header h1 {
-    margin: 0 0 20px;
+/* Headings */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 15px;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
     background-color: #ec407a;
-    padding: 10px 16px;
-    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 4px;
+    border-radius: 5px;
 }
 
+/* Hover effect */
 nav a:hover {
-    background-color: #ad1457;
+    background-color: #f8bbd0;
+    color: #880e4f;
 }
 
-/* Main content */
+/* Main section */
 main {
-    max-width: 600px;
+    max-width: 650px;
     margin: 20px auto;
     padding: 0 15px;
 }
 
 /* Profile cards */
 .card {
-    background-color: white;
-    border: 2px solid #ffb6c1;
-    border-radius: 14px;
+    width: 100%;
     padding: 20px;
+    border: 2px solid #f8bbd0;
+    border-radius: 12px;
+    background-color: white;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-.card h2 {
-    margin-top: 0;
-    color: #333;
+/* About card */
+#about {
+    border-color: #d81b60;
 }
 
-/* Profile badge */
-.badge {
+/* Pseudo-element */
+#about::after {
+    content: "PROFILE";
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #e91e63;
+    background-color: #d81b60;
     color: white;
-    padding: 3px 10px;
+    font-size: 10px;
+    padding: 3px 7px;
     border-radius: 5px;
-    font-size: 12px;
+}
+
+/* Paragraphs */
+.card p {
+    margin-bottom: 10px;
 }
 
 /* Introduction */
 .intro {
-    color: #d81b60;
+    color: #c2185b;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-size: 18px;
 }
 
-/* Pseudo-element */
+/* First letter pseudo-element */
 .intro::first-letter {
     font-size: 2rem;
-    color: #e91e63;
+    color: #d81b60;
 }
 
-/* Skills */
-.skills {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.skills span {
-    flex: 1;
-    min-width: 100px;
-    text-align: center;
+/* Skills list */
+.skills-list > li {
     background-color: #fce4ec;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
-/* Display and visibility */
+/* Flexbox */
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Display example */
 .hide-none {
     display: none;
 }
 
+/* Visibility example */
 .hide-visibility {
     visibility: hidden;
 }
@@ -121,43 +148,33 @@ main {
 .scroll-box {
     height: 120px;
     overflow: auto;
-    padding: 5px;
-}
-
-/* Reflection questions */
-#reflection p {
-    margin-bottom: 18px;
 }
 
 /* Footer */
 footer {
-    background-color: #d81b60;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 24px;
+/* Reflection answers */
+
+/*
+1. The later body rule wins because both rules have the
+same selector and specificity. The last rule takes effect.
+
+2. The total width with content-box is 544px.
+500px width plus 40px padding plus 4px borders.
+
+3. Visibility hidden keeps the element's space.
+Display none removes the element and its space.
+*/
+
+/* Responsive layout */
+@media (max-width: 500px) {
+    nav a {
+        padding: 7px 10px;
     }
 
-    main {
-        padding: 0 12px;
-    }
-
-    .card {
-        padding: 16px;
-    }
-
-    .skills {
+    .skills-list {
         flex-direction: column;
     }
-
-    .skills span {
-        width: 100%;
-    }
 }
-```
